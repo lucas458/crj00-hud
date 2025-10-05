@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #000;
+    color: #fff;
+    user-select: none;
+}
+
+
+
+#main_screen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+
+
+/* HUD */
+#hud{
+    width: 550px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ROLL */
+#roll_container{
+    width: 180px;
+    height: 39px; 
+    background-image: url("assets/hud_roll_fixed.png");
+    image-rendering: pixelated;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+}
+
+#roll_indicator{
+    width: 180px;
+    height: 39px;
+    background-image: url("assets/hud_roll_indicator.png");
+    transform-origin: center 136px;
+    transform: rotate(0deg);
+    image-rendering: pixelated;
+}
+
+
+
+
+/* SPEED */
+#speed_container{
+    width: 37px;
+    height: 210px;
+    border-right: 1px solid #5f5;
+    overflow: hidden;
+    position: absolute;
+    top: 56px;
+}
+
+#speed_strip{
+    width: 37px;
+    height: 894px;
+    background-image: url("assets/hud_speed.png");
+    image-rendering: pixelated;
+    position: relative;
+    top: calc( -894px + 210px / 2);
+}
+
+
+#hud_speed_ap{
+    width: 12px;
+    height: 28px;
+    background-image: url("assets/hud_speed_ap.png");
+    image-rendering: pixelated;
+    position: absolute;
+    top: 141px;
+    left: 28px;
+}
+
+
+#hud_speed_indicator{
+    width: 15px;
+    height: 7px;
+    background-image: url("assets/hud_speed_indicator.png");
+    image-rendering: pixelated;
+    position: absolute;
+    left: 37px;
+    top: 152px;
+}
+
+
+
+/* ALTITUDE */
+#altitude_container{
+    width: 37px;
+    height: 210px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 56px;
+}
+
+#altitude_strip{
+    width: 37px;
+    height: 1947px;
+    background-image: url("assets/hud_altitude_100_900.png");
+    image-rendering: pixelated;
+    position: relative;
+    top: calc( -1947px + 1192px / 2);
+}
+
+
+
+
+
+
+
+/* ALTITUDE INDICATOR */
+#altitude_indicator{
+    width: 68px;
+    height: 26px;
+    background-image: url("assets/hud_altitude_indicator.png");
+    image-rendering: pixelated;
+    
+    display: flex;
+    gap: 2px;
+    padding-top: 2px;
+    position: absolute;
+    right: 0;
+    top: 148px;
+    
+}
+
+.altitude_bigNumber_container{
+    width: 13px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.altitude_bigNumber_container:first-child{
+    visibility: hidden;
+}
+
+.altitude_bigNumber{
+    width: 13px;
+    height: 242px;
+    background-image: url("assets/hud_altitude_bigNumber.png");
+    image-rendering: pixelated;
+    position: relative;
+    top: 0px;
+}
+
+
+
+
+
+
+
+/* COMPASS */
+#compass_container{
+    width: 182px;
+    height: 182px;
+    /* height: 175px; */
+    background-image: url("assets/hud_compass_indicator.png");
+    image-rendering: pixelated;
+    position: absolute;
+    left: calc(50% - 182px / 2);
+    bottom: -84px;
+}
+
+#compass{
+    width: 182px;
+    height: 182px;
+    background-image: url("assets/hud_compass.png");
+    image-rendering: pixelated;
+    transform-origin: center center;
+    transform: rotate(0deg);
+}
+
+#hud_compass_ap{
+    width: 19px;
+    height: 6px;
+    background-image: url("assets/hud_compass_ap.png");
+    image-rendering: pixelated;
+    transform-origin: center 79px;
+    transform: rotate(0deg);
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 12px;
+}
+
+
+
+
+/* ATITUDE */
+#atitude_wrapper{
+    width: 408px;
+    height: 217px;
+    overflow: hidden;
+    position: absolute;
+    left: calc(50% - 408px / 2); 
+    top: 80px;
+}
+
+#atitude{
+    width: 408px;
+    height: 3713px; 
+    background-image: url("assets/hud_atitude_lines.png");
+    image-rendering: pixelated;
+    transform: rotate(0deg) translateY(0px);
+    transform-origin: center center;
+    position: relative;
+    top: -1748px;
+}
+
+#atitude_numbers{
+    width: 408px;
+    height: 3713px; 
+    background-image: url("assets/hud_atitude_number.png");
+    image-rendering: pixelated;
+    transform: rotate(0deg) translateY(0px);
+    transform-origin: center center;
+    position: relative;
+    /* top: -1748px; */
+}
+
+
+
+
+/* COMPASS HORIZONTAL */
+#hud_compass_horizontal_wrapper{
+    width: 408px;
+    height: 20px;
+    overflow: hidden;
+    position: absolute;
+    left: calc(50% - 408px / 2);
+    top: calc(50% - 19px);
+}
+
+#hud_compass_horizontal_strip{
+    width: 8232px;
+    height: 20px;
+    background-image: url("assets/hud_compass_horizontal.png");
+    image-rendering: pixelated;
+    position: relative;
+    left: -3910px;
+}
+
+
+
+/* AIRCRAFT REFERENCE */
+#hud_aircraft_reference{
+    width: 78px;
+    height: 9px;
+    background-image: url("assets/hud_aircraft_reference.png");
+    image-rendering: pixelated;
+    position: absolute;
+    left: calc(50% - 78px / 2);
+    top: 189px;
+
+}
+
+
+
+
+/* FLIGHT PATH */
+#hud_flight_path{
+    width: 75px;
+    height: 25px;
+    background-image: url("assets/hud_flight_path.png");
+    image-rendering: pixelated;
+    transform: translate(0px, 0px);
+    position: relative;
+    left: calc(50% - 75px / 2);
+    top: calc(50% - 25px / 2);
+    
+}
+
+/* FLIGHT ACCLELERATION */
+#hud_flight_acceleration{
+    width: 75px;
+    height: 25px;
+    background-image: url("assets/hud_flight_acceleration.png");
+    image-rendering: pixelated;
+    transform: translate(0px, 0px);
+}
+
+
+#cameraPreview{
+    width: 100%;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+}
